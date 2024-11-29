@@ -7,7 +7,7 @@ const api = axios.create({
 export const uploadVideo = async (file) => {
   const formData = new FormData();
   formData.append('video', file);
-  const response = await api.post('/middlewares/upload', formData, {
+  const response = await api.post('/api/videos/upload', formData, {
     headers: { 'Content-Type': 'multipart/form-data' }
   });
   return response.data;
